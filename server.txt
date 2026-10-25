@@ -1,0 +1,1 @@
+Debug/base.cpp.o Debug/logger.cpp.o Debug/calc.cpp.o Debug/communicator.cpp.o Debug/interface.cpp.o Debug/main.cpp.o
