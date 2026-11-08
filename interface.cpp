@@ -1,36 +1,65 @@
 #include "interface.h"
 #include <iostream>
-
-namespace po = boost::program_options;
-
-Interface::Interface() : desc("Допустимые параметры") {
-    desc.add_options()
-        ("help,h", "Выдать справку")
-        ("file,f", po::value<std::string>()->default_value("/etc/vcalc.conf"), "Путь к базе клиентов")
-        ("log,l", po::value<std::string>()->default_value("/var/log/vcalc.log"), "Путь к файлу журнала")
-        ("port,p", po::value<uint16_t>()->default_value(33333), "Порт сервера");
-}
+#include <stdexcept>
+#include <cstdlib>
 
 ConfigParams Interface::parse_cmd(int argc, char** argv) {
     ConfigParams params;
-    po::variables_map vm;
 
-    po::store(po::parse_command_line(argc, argv, desc), vm);
-    po::notify(vm);
-
-    if (vm.count("help") || argc == 1) {
+    if (argc == 1) {
         params.help_requested = true;
         return params;
     }
 
-    params.base_file = vm["file"].as<std::string>();
-    params.log_file = vm["log"].as<std::string>();
-    params.port = vm["port"].as<uint16_t>();
+    for (int i = 1; i < argc; ++i) {
+        std::string arg = argv[i];
+
+        if (arg == "-h" || arg == "--help") {
+            params.help_requested = true;
+            return params;
+        } 
+        else if (arg == "-f" || arg == "--file") {
+            if (i + 1 < argc) {
+                params.base_file = argv[++i];
+            } else {
+                throw std::invalid_argument("Ошибка: не указано значение для параметра -f/--file");
+            }
+        } 
+        else if (arg == "-l" || arg == "--log") {
+            if (i + 1 < argc) {
+                params.log_file = argv[++i];
+            } else {
+                throw std::invalid_argument("Ошибка: не указано значение для параметра -l/--log");
+            }
+        } 
+        else if (arg == "-p" || arg == "--port") {
+            if (i + 1 < argc) {
+                try {
+                    int port_val = std::stoi(argv[++i]);
+                    if (port_val < 0 || port_val > 65535) {
+                        throw std::out_of_range("Порт должен быть в диапазоне от 0 до 65535");
+                    }
+                    params.port = static_cast<uint16_t>(port_val);
+                } catch (const std::exception&) {
+                    throw std::invalid_argument("Ошибка: неверное значение порта");
+                }
+            } else {
+                throw std::invalid_argument("Ошибка: не указано значение для параметра -p/--port");
+            }
+        } 
+        else {
+            throw std::invalid_argument("Ошибка: неизвестный параметр " + arg);
+        }
+    }
 
     return params;
 }
 
 void Interface::print_help() const {
     std::cout << "Программа сетевого сервера обработки векторов\n";
-    std::cout << desc << std::endl;
+    std::cout << "Допустимые параметры:\n";
+    std::cout << "  -h, --help          Выдать справку\n";
+    std::cout << "  -f, --file <path>   Путь к базе клиентов (по умолчанию: /etc/vcalc.conf)\n";
+    std::cout << "  -l, --log <path>    Путь к файлу журнала (по умолчанию: /var/log/vcalc.log)\n";
+    std::cout << "  -p, --port <num>    Порт сервера (по умолчанию: 33333)\n";
 }

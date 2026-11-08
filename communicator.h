@@ -12,6 +12,8 @@ private:
 
     std::string calculate_sha1(const std::string& input);
     void handle_client(int client_socket);
+    
+    friend struct CommunicatorTest_Sha1Calculation_Test;
 
 public:
     Communicator(uint16_t port, Base& base, Logger& logger);

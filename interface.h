@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include <boost/program_options.hpp>
+#include <cstdint>
 
 struct ConfigParams {
     std::string base_file = "/etc/vcalc.conf";
@@ -10,11 +10,8 @@ struct ConfigParams {
 };
 
 class Interface {
-private:
-    boost::program_options::options_description desc;
-
 public:
-    Interface();
+    Interface() = default;
     ConfigParams parse_cmd(int argc, char** argv);
     void print_help() const;
 };
