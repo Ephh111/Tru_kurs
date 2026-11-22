@@ -1,0 +1,31 @@
+\doxysection{communicator.\+h}
+\hypertarget{communicator_8h_source}{}\label{communicator_8h_source}\mbox{\hyperlink{communicator_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{base_8h}{base.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{logger_8h}{logger.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCommunicator}{Communicator}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ server\_socket;\ }
+\DoxyCodeLine{00019\ \ \ \ \ uint16\_t\ port;\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classBase}{Base}}\&\ base;\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classLogger}{Logger}}\&\ logger;\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \ \ \ \ std::string\ calculate\_sha1(\textcolor{keyword}{const}\ std::string\&\ input);}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ handle\_client(\textcolor{keywordtype}{int}\ client\_socket);}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }CommunicatorTest\_Sha1Calculation\_Test;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classCommunicator}{Communicator}}(uint16\_t\ port,\ \mbox{\hyperlink{classBase}{Base}}\&\ base,\ \mbox{\hyperlink{classLogger}{Logger}}\&\ logger);}
+\DoxyCodeLine{00047\ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classCommunicator_a4ced5362bf7438924f8d7f1b0c5ec391}{\string~Communicator}}();}
+\DoxyCodeLine{00050\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCommunicator_a142fae13b16b166519315f248a513c62}{start}}();}
+\DoxyCodeLine{00056\ \};}
+
+\end{DoxyCode}

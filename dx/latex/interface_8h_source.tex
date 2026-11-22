@@ -1,0 +1,25 @@
+\doxysection{interface.\+h}
+\hypertarget{interface_8h_source}{}\label{interface_8h_source}\mbox{\hyperlink{interface_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structConfigParams}{ConfigParams}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ \mbox{\hyperlink{structConfigParams_a9ef13a0dbff2f7b636030e580252b5bc}{base\_file}}\ =\ \textcolor{stringliteral}{"{}/etc/vcalc.conf"{}};\ }
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ \mbox{\hyperlink{structConfigParams_ab3700d340cc36356e3443d8604725aed}{log\_file}}\ =\ \textcolor{stringliteral}{"{}/var/log/vcalc.log"{}};\ }
+\DoxyCodeLine{00017\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structConfigParams_a500da01cb60acc112a1c98bae5bbfadc}{port}}\ =\ 33333;\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structConfigParams_a67a6e5e2f4a575d133179bdf3d1002a3}{help\_requested}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classInterface}{Interface}}\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classInterface_ae0e5b08ef260a27c1aabb8adc4570ef5}{Interface}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{structConfigParams}{ConfigParams}}\ \mbox{\hyperlink{classInterface_a70be9a19ae7de4cac41645eaf0d3fc6a}{parse\_cmd}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv);}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInterface_a550accc34bdbcabefdb51114846f6559}{print\_help}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \};}
+
+\end{DoxyCode}

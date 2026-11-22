@@ -1,0 +1,69 @@
+\begin{theindex}
+
+  \item {Base}, \hyperpage{9}
+    \subitem {get\_password}, \hyperpage{9}
+    \subitem {load\_base}, \hyperpage{10}
+  \item {base.h}, \hyperpage{17}
+
+  \indexspace
+
+  \item {Calc}, \hyperpage{10}
+    \subitem {compute\_average}, \hyperpage{11}
+  \item {calc.h}, \hyperpage{18}
+  \item {Communicator}, \hyperpage{11}
+    \subitem {Communicator}, \hyperpage{12}
+    \subitem {start}, \hyperpage{12}
+  \item {communicator.h}, \hyperpage{18}
+  \item {compute\_average}
+    \subitem {Calc}, \hyperpage{11}
+  \item {ConfigParams}, \hyperpage{12}
+  \item {CritErr}, \hyperpage{13}
+    \subitem {CritErr}, \hyperpage{13}
+
+  \indexspace
+
+  \item {errors.h}, \hyperpage{19}
+
+  \indexspace
+
+  \item {get\_password}
+    \subitem {Base}, \hyperpage{9}
+
+  \indexspace
+
+  \item {Interface}, \hyperpage{13}
+    \subitem {parse\_cmd}, \hyperpage{14}
+  \item {interface.h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {load\_base}
+    \subitem {Base}, \hyperpage{10}
+  \item {log}
+    \subitem {Logger}, \hyperpage{15}
+  \item {Logger}, \hyperpage{14}
+    \subitem {log}, \hyperpage{15}
+    \subitem {Logger}, \hyperpage{15}
+  \item {logger.h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {NoCritErr}, \hyperpage{16}
+    \subitem {NoCritErr}, \hyperpage{16}
+
+  \indexspace
+
+  \item {parse\_cmd}
+    \subitem {Interface}, \hyperpage{14}
+
+  \indexspace
+
+  \item {start}
+    \subitem {Communicator}, \hyperpage{12}
+
+  \indexspace
+
+  \item {Сервер обработки векторов}, 
+		\hyperpage{1}
+
+\end{theindex}

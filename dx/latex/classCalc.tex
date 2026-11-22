@@ -1,0 +1,46 @@
+\doxysection{Класс Calc}
+\hypertarget{classCalc}{}\label{classCalc}\index{Calc@{Calc}}
+
+
+Класс для выполнения вычислений над векторами.  
+
+
+
+
+{\ttfamily \#include $<$calc.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static int16\+\_\+t \mbox{\hyperlink{classCalc_acc69b2ec11300f7746faf4c824222fd9}{compute\+\_\+average}} (const std\+::vector$<$ int16\+\_\+t $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Вычисляет среднее арифметическое элементов вектора. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для выполнения вычислений над векторами. 
+
+\doxysubsection{Методы}
+\Hypertarget{classCalc_acc69b2ec11300f7746faf4c824222fd9}\label{classCalc_acc69b2ec11300f7746faf4c824222fd9} 
+\index{Calc@{Calc}!compute\_average@{compute\_average}}
+\index{compute\_average@{compute\_average}!Calc@{Calc}}
+\doxysubsubsection{\texorpdfstring{compute\_average()}{compute\_average()}}
+{\footnotesize\ttfamily int16\+\_\+t Calc\+::compute\+\_\+average (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int16\+\_\+t $>$ \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Вычисляет среднее арифметическое элементов вектора. 
+
+В случае переполнения типа int16\+\_\+t результат ограничивается максимальным (32767) или минимальным (-\/32768) значением. 
+\begin{DoxyParams}{Аргументы}
+{\em vec} & Константная ссылка на вектор 16-\/битных целых чисел. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Среднее значение в виде int16\+\_\+t. 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{calc_8h}{calc.\+h}}\item 
+calc.\+cpp\end{DoxyCompactItemize}

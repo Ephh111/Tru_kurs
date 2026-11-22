@@ -1,0 +1,59 @@
+\doxysection{Класс Interface}
+\hypertarget{classInterface}{}\label{classInterface}\index{Interface@{Interface}}
+
+
+Класс для разбора аргументов командной строки.  
+
+
+
+
+{\ttfamily \#include $<$interface.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classInterface_ae0e5b08ef260a27c1aabb8adc4570ef5}\label{classInterface_ae0e5b08ef260a27c1aabb8adc4570ef5} 
+{\bfseries Interface} ()=default
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structConfigParams}{Config\+Params}} \mbox{\hyperlink{classInterface_a70be9a19ae7de4cac41645eaf0d3fc6a}{parse\+\_\+cmd}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Разбирает аргументы командной строки. \end{DoxyCompactList}\item 
+\Hypertarget{classInterface_a550accc34bdbcabefdb51114846f6559}\label{classInterface_a550accc34bdbcabefdb51114846f6559} 
+void {\bfseries print\+\_\+help} () const
+\begin{DoxyCompactList}\small\item\em Выводит справку \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для разбора аргументов командной строки. 
+
+\doxysubsection{Методы}
+\Hypertarget{classInterface_a70be9a19ae7de4cac41645eaf0d3fc6a}\label{classInterface_a70be9a19ae7de4cac41645eaf0d3fc6a} 
+\index{Interface@{Interface}!parse\_cmd@{parse\_cmd}}
+\index{parse\_cmd@{parse\_cmd}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{parse\_cmd()}{parse\_cmd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structConfigParams}{Config\+Params}} Interface\+::parse\+\_\+cmd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+
+
+Разбирает аргументы командной строки. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em argc} & Количество аргументов. \\
+\hline
+{\em argv} & Массив строковых аргументов. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Структура с параметрами конфигурации. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::invalid\+\_\+argument} & При неверных аргументах. \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_8h}{interface.\+h}}\item 
+interface.\+cpp\end{DoxyCompactItemize}

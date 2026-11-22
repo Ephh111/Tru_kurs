@@ -1,0 +1,70 @@
+\doxysection{Класс Logger}
+\hypertarget{classLogger}{}\label{classLogger}\index{Logger@{Logger}}
+
+
+Класс для записи логов в файл.  
+
+
+
+
+{\ttfamily \#include $<$logger.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLogger_a32e976790347a55deeea97ee87fb67c9}{Logger}} (const std\+::string \&path="{}/var/\mbox{\hyperlink{classLogger_aab9f6389b5ffceffc4f98862d15c6e7f}{log}}/vcalc.\+log"{})
+\begin{DoxyCompactList}\small\item\em Конструктор логгера. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLogger_aab9f6389b5ffceffc4f98862d15c6e7f}{log}} (const std\+::string \&message, bool is\+\_\+critical)
+\begin{DoxyCompactList}\small\item\em Записывает сообщение в лог. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для записи логов в файл. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classLogger_a32e976790347a55deeea97ee87fb67c9}\label{classLogger_a32e976790347a55deeea97ee87fb67c9} 
+\index{Logger@{Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Logger()}{Logger()}}
+{\footnotesize\ttfamily Logger\+::\+Logger (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path = {\ttfamily "{}/var/\mbox{\hyperlink{classLogger_aab9f6389b5ffceffc4f98862d15c6e7f}{log}}/vcalc.log"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор логгера. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em path} & Путь к файлу лога. По умолчанию "{}/var/log/vcalc.\+log"{}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{classLogger_aab9f6389b5ffceffc4f98862d15c6e7f}\label{classLogger_aab9f6389b5ffceffc4f98862d15c6e7f} 
+\index{Logger@{Logger}!log@{log}}
+\index{log@{log}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void Logger\+::log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{bool}]{is\+\_\+critical }\end{DoxyParamCaption})}
+
+
+
+Записывает сообщение в лог. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст сообщения. \\
+\hline
+{\em is\+\_\+critical} & Флаг критичности (true -\/ CRITICAL, false -\/ WARNING). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \doxylink{classCritErr}{Crit\+Err}} & Если файл лога не может быть открыт. \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{logger_8h}{logger.\+h}}\item 
+logger.\+cpp\end{DoxyCompactItemize}

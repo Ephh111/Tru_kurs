@@ -1,0 +1,25 @@
+\chapter{Сервер обработки векторов}
+\hypertarget{md_README}{}\label{md_README}\index{Сервер обработки векторов@{Сервер обработки векторов}}
+\label{md_README_autotoc_md0}%
+\Hypertarget{md_README_autotoc_md0}%
+ \hypertarget{md_README_autotoc_md1}{}\doxysection{\texorpdfstring{Возможности программы}{Возможности программы}}\label{md_README_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Проверка паролей с помощью хеш-\/функции SHA-\/1.
+\item Чтение базы логинов и паролей из текстового файла.
+\item Работа с сетью через сокеты.
+\item Вычисление среднего значения для векторов из 16-\/битных чисел.
+\item Запись логов работы сервера в файл.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md2}{}\doxysection{\texorpdfstring{Сборка проекта}{Сборка проекта}}\label{md_README_autotoc_md2}
+Проект собирается с помощью утилиты {\ttfamily make}. В папке с проектом нужно выполнить команду\+: make
+
+Для очистки скомпилированных файлов используется\+: make clean\hypertarget{md_README_autotoc_md3}{}\doxysubsection{\texorpdfstring{Параметры командной строки\+:}{Параметры командной строки:}}\label{md_README_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\ttfamily -\/h} или {\ttfamily -\/-\/help} — вывод справки.
+\item {\ttfamily -\/f \texorpdfstring{$<$}{<}путь\texorpdfstring{$>$}{>}} — путь к базе клиентов (по умолчанию {\ttfamily /etc/vcalc.conf}).
+\item {\ttfamily -\/l \texorpdfstring{$<$}{<}путь\texorpdfstring{$>$}{>}} — путь к журналу (по умолчанию {\ttfamily /var/log/vcalc.log}).
+\item {\ttfamily -\/p \texorpdfstring{$<$}{<}номер\texorpdfstring{$>$}{>}} — порт сервера (по умолчанию {\ttfamily 33333}).
+\end{DoxyItemize}
+
+{\bfseries{Пример запуска\+:}} ./server\+\_\+kurs -\/p 33333 -\/f vcalc.\+conf -\/l vcalc.\+log 

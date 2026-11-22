@@ -7,7 +7,6 @@
 Logger::Logger(const std::string& path) : log_file_path(path) {}
 
 void Logger::log(const std::string& message, bool is_critical) {
-    std::lock_guard<std::mutex> lock(log_mutex);
     std::ofstream file(log_file_path, std::ios::app);
     if (!file.is_open()) {
         throw CritErr("Failed to open log file: " + log_file_path);

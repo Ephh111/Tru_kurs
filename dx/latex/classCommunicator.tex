@@ -1,0 +1,78 @@
+\doxysection{Класс Communicator}
+\hypertarget{classCommunicator}{}\label{classCommunicator}\index{Communicator@{Communicator}}
+
+
+Класс сетевого сервера.  
+
+
+
+
+{\ttfamily \#include $<$communicator.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommunicator_af99934b504fb247a41bfb20ee6b832a0}{Communicator}} (uint16\+\_\+t port, \mbox{\hyperlink{classBase}{Base}} \&base, \mbox{\hyperlink{classLogger}{Logger}} \&logger)
+\begin{DoxyCompactList}\small\item\em Конструктор коммуникатора. \end{DoxyCompactList}\item 
+\Hypertarget{classCommunicator_a4ced5362bf7438924f8d7f1b0c5ec391}\label{classCommunicator_a4ced5362bf7438924f8d7f1b0c5ec391} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Communicator} ()
+\begin{DoxyCompactList}\small\item\em Деструктор, закрывает сокет. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCommunicator_a142fae13b16b166519315f248a513c62}{start}} ()
+\begin{DoxyCompactList}\small\item\em Запускает сервер и входит в бесконечный цикл приема подключений. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Друзья}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCommunicator_aaaf53332f5d0062fe8cb66ce3a1d4950}\label{classCommunicator_aaaf53332f5d0062fe8cb66ce3a1d4950} 
+struct {\bfseries Communicator\+Test\+\_\+\+Sha1\+Calculation\+\_\+\+Test}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс сетевого сервера. 
+
+Обрабатывает подключения, аутентификацию и вычисления. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classCommunicator_af99934b504fb247a41bfb20ee6b832a0}\label{classCommunicator_af99934b504fb247a41bfb20ee6b832a0} 
+\index{Communicator@{Communicator}!Communicator@{Communicator}}
+\index{Communicator@{Communicator}!Communicator@{Communicator}}
+\doxysubsubsection{\texorpdfstring{Communicator()}{Communicator()}}
+{\footnotesize\ttfamily Communicator\+::\+Communicator (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port,  }\item[{\mbox{\hyperlink{classBase}{Base}} \&}]{base,  }\item[{\mbox{\hyperlink{classLogger}{Logger}} \&}]{logger }\end{DoxyParamCaption})}
+
+
+
+Конструктор коммуникатора. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em port} & Порт для прослушивания. \\
+\hline
+{\em base} & Ссылка на БД. \\
+\hline
+{\em logger} & Ссылка на логгер. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{classCommunicator_a142fae13b16b166519315f248a513c62}\label{classCommunicator_a142fae13b16b166519315f248a513c62} 
+\index{Communicator@{Communicator}!start@{start}}
+\index{start@{start}!Communicator@{Communicator}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Communicator\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Запускает сервер и входит в бесконечный цикл приема подключений. 
+
+
+\begin{DoxyExceptions}{Исключения}
+{\em \doxylink{classCritErr}{Crit\+Err}} & Если не удается создать сокет или привязать его к порту. \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{communicator_8h}{communicator.\+h}}\item 
+communicator.\+cpp\end{DoxyCompactItemize}

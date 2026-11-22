@@ -1,0 +1,76 @@
+\doxysection{Класс Base}
+\hypertarget{classBase}{}\label{classBase}\index{Base@{Base}}
+
+
+Класс для хранения и загрузки базы пользователей.  
+
+
+
+
+{\ttfamily \#include $<$base.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBase_a58887755525abd3f340963e2bbdcc972}\label{classBase_a58887755525abd3f340963e2bbdcc972} 
+{\bfseries Base} ()=default
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBase_af542cd0bc2ee83dd4d3757bb873e2391}{load\+\_\+base}} (const std\+::string \&file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Загружает базу пользователей из файла. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classBase_a7529cefd5b4dd37568833dc31d056789}{get\+\_\+password}} (const std\+::string \&login) const
+\begin{DoxyCompactList}\small\item\em Возвращает пароль по логину. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для хранения и загрузки базы пользователей. 
+
+\doxysubsection{Методы}
+\Hypertarget{classBase_a7529cefd5b4dd37568833dc31d056789}\label{classBase_a7529cefd5b4dd37568833dc31d056789} 
+\index{Base@{Base}!get\_password@{get\_password}}
+\index{get\_password@{get\_password}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{get\_password()}{get\_password()}}
+{\footnotesize\ttfamily std\+::string Base\+::get\+\_\+password (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{login }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает пароль по логину. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em login} & -\/ Логин пользователя. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Строка с паролем. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \doxylink{classNoCritErr}{No\+Crit\+Err}} & Если пользователь не найден. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classBase_af542cd0bc2ee83dd4d3757bb873e2391}\label{classBase_af542cd0bc2ee83dd4d3757bb873e2391} 
+\index{Base@{Base}!load\_base@{load\_base}}
+\index{load\_base@{load\_base}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{load\_base()}{load\_base()}}
+{\footnotesize\ttfamily void Base\+::load\+\_\+base (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Загружает базу пользователей из файла. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em file\+\_\+path} & -\/ Путь к файлу базы данных. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \doxylink{classCritErr}{Crit\+Err}} & Если файл не может быть открыт. \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{base_8h}{base.\+h}}\item 
+base.\+cpp\end{DoxyCompactItemize}
